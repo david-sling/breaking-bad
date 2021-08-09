@@ -124,3 +124,26 @@ $gray: gray;
     justify-self: flex-end;
   }
 }
+
+.Info {
+  padding: 20px;
+}
+
+.Footer {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  button {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      box-shadow: 2px 2px 8px 0 #8f8f8fab;
+    }
+  }
+}

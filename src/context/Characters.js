@@ -13,6 +13,20 @@ export const CharactersProvider = ({ children }) => {
     getCharacters();
   }, [page, limit, name]);
 
+  useEffect(() => {
+    setPage(1);
+  }, [name]);
+
+  const nextPage = () => {
+    if (characters.length) {
+      setPage((p) => p + 1);
+    }
+  };
+
+  const prevPage = () => {
+    setPage((p) => (p > 1 ? p - 1 : p));
+  };
+
   const getCharacters = async () => {
     console.log({ page, limit, name });
     const { data } = await axios.get(
@@ -28,7 +42,16 @@ export const CharactersProvider = ({ children }) => {
     setCharacters(data);
   };
 
-  const value = { characters, setCharacters, page, setPage, name, setName };
+  const value = {
+    characters,
+    setCharacters,
+    page,
+    setPage,
+    name,
+    setName,
+    nextPage,
+    prevPage,
+  };
   return (
     <CharactersContext.Provider value={value}>
       {children}
