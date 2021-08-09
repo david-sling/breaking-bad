@@ -11,6 +11,9 @@ export default function CharacterPreview({
   birthday,
   status,
   img: image,
+  full,
+  appearance,
+  portrayed,
 }) {
   const { date, month, year } = dateParse(birthday);
   const hasBirthday = birthday !== "Unknown";
@@ -42,10 +45,29 @@ export default function CharacterPreview({
           </>
         )}
       </div>
-      <div className="occupation">
-        {occupation.map((o) => (
-          <p>{o}</p>
-        ))}
+      <div className="details">
+        <div className="occupation">
+          {full && <h2>OCCUPATION</h2>}
+          {occupation?.map((o) => (
+            <p>{o}</p>
+          ))}
+        </div>
+        {full && (
+          <>
+            <div className="appearance">
+              <h2>APPEARANCE</h2>
+              <ul>
+                {appearance?.map((n) => (
+                  <li>SEASON {n}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="portrayed">
+              <h2>PORTRAYED BY</h2>
+              <p>{portrayed}</p>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

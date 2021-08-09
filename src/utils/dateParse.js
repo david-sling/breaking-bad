@@ -1,5 +1,5 @@
 const dateParse = (str, separator = "-") => {
-  var [month, date, year] = str.split(separator);
+  var [month, date, year] = str?.split(separator) || [];
   const months = [
     "January",
     "February",
