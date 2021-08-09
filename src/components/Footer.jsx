@@ -12,7 +12,7 @@ export default function Footer() {
     <div className="Footer">
       {page > 1 && <button onClick={prevPage}>PREVIOUS</button>}
       {length == 10 && <button onClick={nextPage}>NEXT</button>}
-      {!length && <p>END OF RESULTS</p>}
+      {length < 10 && <p>END OF RESULTS</p>}
     </div>
   );
 }
