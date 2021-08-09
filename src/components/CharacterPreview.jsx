@@ -47,7 +47,7 @@ export default function CharacterPreview({
       </div>
       <div className="details">
         <div className="occupation">
-          {full && <h2>OCCUPATION</h2>}
+          {full && <h2>OCCUPATION{occupation?.length > 1 && "S"}</h2>}
           {occupation?.map((o) => (
             <p>{o}</p>
           ))}

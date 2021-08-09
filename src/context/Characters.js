@@ -20,11 +20,13 @@ export const CharactersProvider = ({ children }) => {
   const nextPage = () => {
     if (characters.length) {
       setPage((p) => p + 1);
+      window.scrollTo(0, ".Search");
     }
   };
 
   const prevPage = () => {
     setPage((p) => (p > 1 ? p - 1 : p));
+    window.scrollTo(0, ".Search");
   };
 
   const getCharacters = async () => {

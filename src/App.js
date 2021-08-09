@@ -20,6 +20,7 @@ export default function App() {
               <Search />
               <Info />
               <Characters />
+              <Info />
               <Footer />
             </CharactersProvider>
           </Route>
