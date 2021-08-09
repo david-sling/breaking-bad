@@ -20,8 +20,6 @@ export const CharactersProvider = ({ children }) => {
 
   const history = useHistory();
 
-  console.log({ iPage, page });
-
   useEffect(() => {
     setPage(iPage);
   }, [iPage]);
@@ -62,7 +60,6 @@ export const CharactersProvider = ({ children }) => {
   };
 
   const getCharacters = async () => {
-    console.log({ page, limit, name });
     const { data } = await axios.get(
       `https://www.breakingbadapi.com/api/characters`,
       {

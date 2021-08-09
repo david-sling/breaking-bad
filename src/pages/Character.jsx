@@ -6,7 +6,6 @@ import CharacterPreview from "../components/CharacterPreview";
 export default function Character() {
   const { id } = useParams();
   const { character } = useCharacter(id);
-  console.log({ character });
   const { appearance, portrayed } = character;
   return (
     <div className="Character">
