@@ -1,29 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Character from "./components/Character";
-import Characters from "./components/Characters";
-import Footer from "./components/Footer";
-import Info from "./components/Info";
-import Search from "./components/Search";
-import { CharactersProvider } from "./context/Characters";
+import Character from "./pages/Character";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/:id">
-            <Character />
-          </Route>
-          <Route path="/">
-            <CharactersProvider>
-              <Search />
-              <Info />
-              <Characters />
-              <Info />
-              <Footer />
-            </CharactersProvider>
-          </Route>
+          <Route path="/:id" component={Character} />
+          <Route path="/" component={Home} />
         </Switch>
       </Router>
     </div>

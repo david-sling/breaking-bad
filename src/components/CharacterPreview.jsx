@@ -1,6 +1,6 @@
 import React from "react";
 import { dateParse } from "../utils/dateParse";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import calendarRange from "@iconify/icons-mdi/calendar-range";
 
 export default function CharacterPreview({

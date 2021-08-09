@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import search from "@iconify/icons-mdi/search";
 import { CharactersContext } from "../context/Characters";
 

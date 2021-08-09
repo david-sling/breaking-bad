@@ -1,10 +1,7 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useCharacter from "../hooks/useCharacter";
-import { dateParse } from "../utils/dateParse";
-import { Icon, InlineIcon } from "@iconify/react";
-import calendarRange from "@iconify/icons-mdi/calendar-range";
-import CharacterPreview from "./CharacterPreview";
+import CharacterPreview from "../components/CharacterPreview";
 
 export default function Character() {
   const { id } = useParams();
